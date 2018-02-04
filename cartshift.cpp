@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 	int rank;
 
 	MPI_Comm_rank(cartcomm, &rank);
-	MPI_Cart_shift(cartcomm, 2, 1, &src, &dst);
+	MPI_Cart_shift(cartcomm, 2, +1, &src, &dst);
 	printf("src : %2d -> %2d -> dst : %2d\n", src, rank, dst);
 	MPI_Finalize();
 }
